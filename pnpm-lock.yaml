@@ -460,6 +460,12 @@ importers:
       '@coral-xyz/anchor':
         specifier: ^0.27.0
         version: 0.27.0
+      '@cubik/api':
+        specifier: '*'
+        version: link:../../packages/api
+      '@cubik/database':
+        specifier: workspace:*
+        version: link:../../packages/database
       '@solana/wallet-adapter-base':
         specifier: ^0.9.18
         version: 0.9.18(@solana/web3.js@1.78.0)
@@ -511,6 +517,9 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-icons:
+        specifier: ^4.8.0
+        version: 4.8.0(react@18.2.0)
       react-parallax-mouse:
         specifier: ^2.0.1
         version: 2.0.1(@react-three/fiber@8.13.4)(@types/react@18.2.15)(konva@9.2.0)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.1)(react-zdog@1.0.11)(react@18.2.0)(three@0.154.0)(zdog@1.1.3)
@@ -2384,7 +2393,7 @@ packages:
       '@emotion/react': '>=10.0.35'
       react: '>=18'
     dependencies:
-      '@emotion/react': 11.10.6(@types/react@18.2.15)(react@18.2.0)
+      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
       react: 18.2.0
     dev: false
 
@@ -2750,8 +2759,8 @@ packages:
       '@chakra-ui/react-env': 3.0.0(react@18.2.0)
       '@chakra-ui/system': 2.5.8(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(react@18.2.0)
       '@chakra-ui/utils': 2.0.15
-      '@emotion/react': 11.10.6(@types/react@18.2.15)(react@18.2.0)
-      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.2.15)(react@18.2.0)
+      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
+      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.28)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
@@ -3255,8 +3264,8 @@ packages:
       '@chakra-ui/styled-system': 2.9.1
       '@chakra-ui/theme-utils': 2.0.18
       '@chakra-ui/utils': 2.0.15
-      '@emotion/react': 11.10.6(@types/react@18.2.15)(react@18.2.0)
-      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.2.15)(react@18.2.0)
+      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
+      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.28)(react@18.2.0)
       react: 18.2.0
       react-fast-compare: 3.2.1
     dev: false
