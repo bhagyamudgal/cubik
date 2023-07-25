@@ -9,6 +9,15 @@ const nextConfig = {
     // }
     return config;
   },
+  transpilePackages: ['@cubik/api', '@cubik/database'],
+  images: {
+    domains: [
+      'd1yweukyu067aq.cloudfront.net',
+      'www.sandstormhackathon.com',
+      'media-fastly.hackerearth.com',
+      'res.cloudinary.com',
+    ],
+  },
 };
 
 module.exports = nextConfig;

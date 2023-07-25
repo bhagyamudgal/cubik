@@ -472,6 +472,9 @@ importers:
       '@solana/wallet-adapter-wallets':
         specifier: ^0.19.5
         version: 0.19.5(@babel/runtime@7.22.6)(@solana/web3.js@1.78.0)(bs58@4.0.1)(react-dom@18.2.0)(react@18.2.0)
+      '@splinetool/react-spline':
+        specifier: ^2.2.6
+        version: 2.2.6(@splinetool/runtime@0.9.264)(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.3.1
         version: 0.3.1(typescript@5.1.6)(zod@3.21.4)
@@ -493,6 +496,9 @@ importers:
       eslint-config-next:
         specifier: 13.4.12
         version: 13.4.12(eslint@8.45.0)(typescript@5.1.6)
+      framer-motion:
+        specifier: ^10.3.2
+        version: 10.3.2(react-dom@18.2.0)(react@18.2.0)
       next:
         specifier: 13.4.12
         version: 13.4.12(@babel/core@7.22.8)(react-dom@18.2.0)(react@18.2.0)
@@ -505,6 +511,9 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-parallax-mouse:
+        specifier: ^2.0.1
+        version: 2.0.1(@react-three/fiber@8.13.4)(@types/react@18.2.15)(konva@9.2.0)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.1)(react-zdog@1.0.11)(react@18.2.0)(three@0.154.0)(zdog@1.1.3)
       tailwindcss:
         specifier: 3.3.3
         version: 3.3.3
@@ -2375,7 +2384,7 @@ packages:
       '@emotion/react': '>=10.0.35'
       react: '>=18'
     dependencies:
-      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
+      '@emotion/react': 11.10.6(@types/react@18.2.15)(react@18.2.0)
       react: 18.2.0
     dev: false
 
@@ -2741,8 +2750,8 @@ packages:
       '@chakra-ui/react-env': 3.0.0(react@18.2.0)
       '@chakra-ui/system': 2.5.8(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(react@18.2.0)
       '@chakra-ui/utils': 2.0.15
-      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
-      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.28)(react@18.2.0)
+      '@emotion/react': 11.10.6(@types/react@18.2.15)(react@18.2.0)
+      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.2.15)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
@@ -3246,8 +3255,8 @@ packages:
       '@chakra-ui/styled-system': 2.9.1
       '@chakra-ui/theme-utils': 2.0.18
       '@chakra-ui/utils': 2.0.15
-      '@emotion/react': 11.10.6(@types/react@18.0.28)(react@18.2.0)
-      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.28)(react@18.2.0)
+      '@emotion/react': 11.10.6(@types/react@18.2.15)(react@18.2.0)
+      '@emotion/styled': 11.10.6(@emotion/react@11.10.6)(@types/react@18.2.15)(react@18.2.0)
       react: 18.2.0
       react-fast-compare: 3.2.1
     dev: false
@@ -18530,6 +18539,27 @@ packages:
       react-dom: '>=16.8.0'
     dependencies:
       '@types/react': 18.0.28
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-spring: 9.7.2(@react-three/fiber@8.13.4)(konva@9.2.0)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.1)(react-zdog@1.0.11)(react@18.2.0)(three@0.154.0)(zdog@1.1.3)
+    transitivePeerDependencies:
+      - '@react-three/fiber'
+      - konva
+      - react-konva
+      - react-native
+      - react-zdog
+      - three
+      - zdog
+    dev: false
+
+  /react-parallax-mouse@2.0.1(@react-three/fiber@8.13.4)(@types/react@18.2.15)(konva@9.2.0)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.1)(react-zdog@1.0.11)(react@18.2.0)(three@0.154.0)(zdog@1.1.3):
+    resolution: {integrity: sha512-Z8DHFT4ldpBJO69s6AoFehnRtGekC4515mAefM4yOyClyc6Qd0U4DKD5sUbL+qhgb3IE0Y3N7s5smGimOutc8g==}
+    peerDependencies:
+      '@types/react': '>=16.8.0'
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@types/react': 18.2.15
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-spring: 9.7.2(@react-three/fiber@8.13.4)(konva@9.2.0)(react-dom@18.2.0)(react-konva@18.2.10)(react-native@0.72.1)(react-zdog@1.0.11)(react@18.2.0)(three@0.154.0)(zdog@1.1.3)

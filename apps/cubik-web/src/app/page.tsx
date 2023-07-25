@@ -1,19 +1,18 @@
-'use client';
+import LandingPage from '~/components/landing-page/LandingPage';
 
-import { useWallet } from '@solana/wallet-adapter-react';
-import dynamic from 'next/dynamic';
-
-const WalletMultiButton = dynamic(
-  async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
-  { ssr: false },
-);
+// const WalletMultiButton = dynamic(
+//   async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
+//   { ssr: false },
+// );
 export default function Home() {
-  const {} = useWallet();
   return (
     <>
-      <div>
-        <WalletMultiButton />
-      </div>
+      {/* <SEO
+        title={`Cubik`}
+        description={`Fund Public Goods Through Community Voting On Solana `}
+        image={`https://res.cloudinary.com/demonicirfan/image/upload/v1684179451/cubik%20og.png`}
+      /> */}
+      <LandingPage />
     </>
   );
 }
