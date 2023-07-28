@@ -4,6 +4,7 @@
   "types": "./index.ts",
   "scripts": {},
   "dependencies": {
+    "@cubik/database": "workspace:*",
     "dotenv": "^16.3.1",
     "dotenv-cli": "latest"
   },
