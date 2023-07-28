@@ -1,5 +1,5 @@
 {
-  "name": "@cubik/comman-types",
+  "name": "@cubik/common-types",
   "main": "./index.ts",
   "types": "./index.ts",
   "scripts": {},

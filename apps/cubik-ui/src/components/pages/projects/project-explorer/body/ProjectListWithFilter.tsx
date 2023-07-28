@@ -4,6 +4,7 @@ import EmptyProjectsState from './empty-state/ProjectsEmptyState';
 import ProjectsList from './ProjectsList';
 import { trpc } from '~/utils/trpc';
 import ProjectListLoadingSkeleton from '../../skeletons/ProjectListLoadingSkeleton';
+import { ProjectExplorerType } from '@cubik/comman-types';
 
 export type RoundTypes = {
   name: string;
@@ -16,7 +17,12 @@ export type CategoryType = {
   value: string;
   colorScheme?: string;
 };
-export const ProjectListWithFilter: React.FC = () => {
+
+export const ProjectListWithFilter: React.FC = ({
+  projects,
+}: {
+  projects: ProjectExplorerType[];
+}) => {
   const shuffleSeed = useMemo(() => Math.round(Math.random() * 10), []);
 
   const { data: filteredProjectsFromServer, isLoading: filteredProjectsLoading } =
