@@ -1,16 +1,12 @@
+'use client';
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
-import { colors } from '@/theme/colors';
-import { components } from '@/theme/components';
-import { borders } from '@/theme/foundations';
-import { styles } from '@/theme/styles';
-import { textStyles } from '@/theme/textStyles';
-
-const config: ThemeConfig = {
+import { colors, components, borders, styles, textStyles } from '../theme';
+export const config: ThemeConfig = {
   initialColorMode: 'light',
   useSystemColorMode: false,
 };
 
-const theme = extendTheme({
+export const theme = extendTheme({
   fonts: {
     headline: `'Plus Jakarta Sans', sans-serif`,
     body: `'Plus Jakarta Sans', sans-serif`,
@@ -22,5 +18,3 @@ const theme = extendTheme({
   borders,
   components,
 });
-
-export default theme;
