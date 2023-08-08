@@ -180,39 +180,43 @@ model ProjectJoinRound {
 }
 
 model Team {
-  id              String   @id @default(uuid()) @map("_id")
-  userId          String
-  projectsModelId String
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  isActive        Boolean  @default(true)
-  isArchive       Boolean  @default(false)
-  user            User     @relation(fields: [userId], references: [id])
-  ProjectsModel   Project  @relation(fields: [projectsModelId], references: [id])
+  id            String     @id @default(uuid()) @map("_id")
+  userId        String
+  projectId     String?
+  HackathonId   String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  isActive      Boolean    @default(true)
+  isArchive     Boolean    @default(false)
+  user          User       @relation(fields: [userId], references: [id])
+  ProjectsModel Project?   @relation(fields: [projectId], references: [id])
+  Hackathon     Hackathon? @relation(fields: [HackathonId], references: [id])
 
-  @@index([projectsModelId])
+  @@index([HackathonId])
+  @@index([projectId])
   @@index([userId])
 }
 
 model Hackathon {
-  id                     String                  @id @default(uuid()) @map("_id")
-  name                   String
-  logo                   String                  @db.VarChar(500)
-  background             String                  @db.VarChar(500)
+  id                    String                  @id @default(uuid()) @map("_id")
+  name                  String
+  logo                  String                  @db.VarChar(500)
+  background            String                  @db.VarChar(500)
   shortDescription      String                  @db.VarChar(2000)
-  longDescription           String                  @db.Text
-  prizePool                 Int                     @default(0)
-  host                   Json?
-  track                  Json?
-  timeline               Json?
-  social                 Json?
-  slug                   String                  @unique
-  contribution           Contribution[]
-  ProjectJoinHackathons  ProjectJoinHackathons[]
-  createdAt              DateTime                @default(now())
-  updatedAt              DateTime                @updatedAt
-  isActive               Boolean                 @default(true)
-  isArchive              Boolean                 @default(false)
+  longDescription       String                  @db.Text
+  prizePool             Int                     @default(0)
+  host                  Json?
+  track                 Json?
+  timeline              Json?
+  social                Json?
+  slug                  String                  @unique
+  contribution          Contribution[]
+  ProjectJoinHackathons ProjectJoinHackathons[]
+  Team                  Team[]
+  createdAt             DateTime                @default(now())
+  updatedAt             DateTime                @updatedAt
+  isActive              Boolean                 @default(true)
+  isArchive             Boolean                 @default(false)
 }
 
 model ProjectJoinHackathons {
