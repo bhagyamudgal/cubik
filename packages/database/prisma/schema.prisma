@@ -29,12 +29,12 @@ model User {
   Round          Round[]
   Contribution   Contribution[]
   Team           Team[]
-  Proofs         Proofs[]
+  Proof         Proof[]
 
   @@fulltext([username])
 }
 
-model Proofs {
+model Proof {
   id        String    @id @default(uuid()) @map("_id")
   userId    String
   proofType ProofType
