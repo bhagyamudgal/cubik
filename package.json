@@ -15,6 +15,7 @@
     "backend:build": "turbo run build --filter backend",
     "backend:start": "pnpm --filter backend run start",
     "db:studio": "dotenv -- pnpm -F @cubik/database dev",
+    "db:pull": "dotenv -- pnpm -F @cubik/database db:pull",
     "postinstall": "dotenv -- turbo run db:generate"
   },
   "workspaces": [
