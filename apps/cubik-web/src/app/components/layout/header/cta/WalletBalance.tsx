@@ -159,30 +159,34 @@ export const WalletBalance = ({ walletAddress, size }: Props) => {
         const tokenBalance = token.amount / 10 ** token.decimals;
         return token.mint == "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" ? (
           <HStack p="0px 2px" gap="8px" w="full" key={token.tokenAccount}>
-            <USDC
-              size={
-                size
-                  ? size === "sm"
-                    ? { base: "18px", md: "20px" }
-                    : size === "md"
-                    ? { base: "24px", md: "30px" }
-                    : { base: "28px", md: "38px" }
-                  : { base: "18px", md: "20px" }
-              }
-            />
-            <Box
-              as="p"
-              textStyle={
-                size
-                  ? size === "md"
-                    ? { base: "body4", md: "body3" }
-                    : { base: "body3", md: "body2" }
-                  : { base: "body5", md: "body4" }
-              }
-              color="neutral.11"
-            >
-              USDC
-            </Box>
+            <Skeleton w="full" fadeDuration={2.6} isLoaded={!priceLoading}>
+              <HStack gap="8px">
+                <USDC
+                  size={
+                    size
+                      ? size === "sm"
+                        ? { base: "18px", md: "20px" }
+                        : size === "md"
+                        ? { base: "24px", md: "30px" }
+                        : { base: "28px", md: "38px" }
+                      : { base: "18px", md: "20px" }
+                  }
+                />
+                <Box
+                  as="p"
+                  textStyle={
+                    size
+                      ? size === "md"
+                        ? { base: "body4", md: "body3" }
+                        : { base: "body3", md: "body2" }
+                      : { base: "body5", md: "body4" }
+                  }
+                  color="neutral.11"
+                >
+                  USDC
+                </Box>
+              </HStack>
+            </Skeleton>
             <HStack alignItems={"end"} justify={"end"} w="full">
               <Skeleton isLoaded={!priceLoading}>
                 <Box
